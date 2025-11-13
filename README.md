@@ -1,5 +1,5 @@
 # AI Shopping Game
-
+This is a buying, crafting, and trading game where AI-driven demand dynamically change prices and influence strategy.
 
 
 ## GAME-ENGINE
@@ -13,17 +13,18 @@ The game must be run through main.py
 
 ## GAME FLOW
 - The game flow is composed of 3 phases (BuyingPhase, CraftingPhase, SellingPhase), a PhaseLoader and a PhaseController.
-- The PhaseController is the one that actually manages the game flow, while the PhaseLoader is only an intermediate phase where the player must interact with the RegisterBook, pressing the E key to begin the next phase
+- The PhaseController is the one that actually manages the game flow, while the PhaseLoader is only an intermediate phase where the player must interact with the RegisterBook, pressing the E key to begin the next phase.
 
 ```mermaid
   graph TD;
       BuyingPhase-->PhaseLoader-->CraftingPhase-->PhaseLoader-->SellingPhase-->PhaseLoader-->BuyingPhase;
 ```
 
-PhaseLoader:
+## PHASE LOADER
+interact with the RegisterBook, to begin the next phase.
 ![image](https://user-images.githubusercontent.com/24737993/206810769-d1908a96-f739-414c-90b1-5932ccde436e.png)
 
-# BUYING PHASE
+## BUYING PHASE
 - The explanation is simple: if the player has enough money, the purchased amount is added to the item in the player's resource inventory.
 
 
